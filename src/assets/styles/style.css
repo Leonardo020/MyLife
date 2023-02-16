@@ -1,0 +1,39 @@
+.card {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	object-fit: contain;
+	box-shadow: rgba(193, 193, 193, 0.2) 2px 2px 5px 5px;
+	border-radius: 16px;
+	margin: 6px;
+	padding: 10px;
+	line-height: 40px;
+	height: 100%;
+	z-index: 2;
+}
+
+.card p {
+	font-weight: 500;
+}
+
+.bold {
+	font-weight: 800 !important;
+}
+
+.flex {
+	display: flex;
+}
+
+.row {
+	flex-direction: row;
+}
+
+.column {
+	flex-direction: column;
+	justify-content: center;
+}
+
+.flex-center {
+	align-items: center;
+	justify-content: center;
+}
