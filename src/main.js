@@ -14,6 +14,12 @@ import {
 	faFolder,
 	faStar,
 	faBriefcase,
+	faMoon,
+	faSun,
+	faClose,
+	faPlus,
+	faSave,
+	faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -27,7 +33,13 @@ library.add(
 	faCalendarDays,
 	faFolder,
 	faStar,
-	faBriefcase
+	faBriefcase,
+	faMoon,
+	faSun,
+	faClose,
+	faPlus,
+	faSave,
+	faSearch
 );
 
 /*import global styles*/
@@ -37,6 +49,7 @@ import "./assets/styles/style.css";
 /*Import routes app*/
 import { createRouter, createWebHashHistory } from "vue-router";
 import { routes } from "@/routes/routes";
+
 const router = createRouter({
 	mode: "history",
 	history: createWebHashHistory(),

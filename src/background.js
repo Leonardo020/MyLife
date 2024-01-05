@@ -23,6 +23,19 @@ async function createWindow() {
 		},
 	});
 
+	const filter = {
+		urls: ["*://*.google.com/*"],
+	};
+
+	win.webContents.session.webRequest.onBeforeSendHeaders(
+		filter,
+		(details, callback) => {
+			details.requestHeaders["Origin"] = null;
+			details.headers["Origin"] = null;
+			callback({ requestHeaders: details.requestHeaders });
+		}
+	);
+
 	if (process.env.WEBPACK_DEV_SERVER_URL) {
 		// Load the url of the dev server if in development mode
 		await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL);
@@ -61,6 +74,7 @@ app.on("ready", async () => {
 			console.error("Vue Devtools failed to install:", e.toString());
 		}
 	}
+
 	createWindow();
 });
 

@@ -1,8 +1,14 @@
 <template>
-	<section class="menu">
-		<h1>Home!</h1>
-	</section>
-	<footer></footer>
+	<div class="flex row container">
+		<img
+			style="width: 150px !important"
+			src="../../assets/img/miranha-main.png"
+			alt=""
+			width="100"
+			height="150"
+		/>
+		<h1>Bem-vindo a minha bagunça!</h1>
+	</div>
 </template>
 
 <script>

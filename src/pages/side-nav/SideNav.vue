@@ -26,12 +26,30 @@
 			<font-awesome-icon icon="lock" class="icon" />
 			<p class="line-down">Mina</p>
 		</a>
+
+		<font-awesome-icon
+			@click="toggleDark()"
+			:icon="isDark ? 'moon' : 'sun'"
+			class="icon-button"
+		/>
 	</navbar>
 </template>
 
 <script>
+import { useDark, useToggle } from "@vueuse/core";
+const isDark = useDark({
+	selector: "body", //element to add attribute to
+	attribute: "color-scheme", // attribute name
+	valueDark: "dark", // attribute value for dark mode
+	valueLight: "light", // attribute value for light mode
+});
+const toggleDark = useToggle(isDark);
+
 export default {
 	name: "SideNav",
+	data() {
+		return { isDark, toggleDark };
+	},
 };
 </script>
 

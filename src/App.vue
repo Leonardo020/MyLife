@@ -1,5 +1,5 @@
 <template>
-	<div class="flex row">
+	<div class="flex row flex-center">
 		<SideNav />
 		<div class="divider">
 			<router-view></router-view>
@@ -24,6 +24,5 @@ export default {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	color: #2c3e50;
 }
 </style>
